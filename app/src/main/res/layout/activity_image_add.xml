@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ImageActivity">
+
+    <ImageView
+        android:id="@+id/show_imag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/all_button"
+        android:visibility="gone"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/edit"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/add_image_linear"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/btn_edit"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:tint="@color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/add_image_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/clickHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/gallery2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Click here to add image"
+            android:textColor="#8A8A8A"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/all_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/add_Eyes"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_addeyes"
+            android:text="Add Eyes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/remove_watermark"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_watermark"
+            android:text="Remove watermark"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_export"
+            android:text="Export"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+</RelativeLayout>
